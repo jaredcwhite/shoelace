@@ -7,7 +7,9 @@ export default css`
   :host {
     --size: 3rem;
     --blank-background: var(--sl-color-neutral-base-faded);
+    --color: var(--sl-color-text-inverse);
     --font-weight: var(--sl-font-weight-normal);
+    --border-radius: var(--sl-control-border-radius-medium);
 
     display: inline-block;
   }
@@ -23,7 +25,7 @@ export default css`
     font-family: var(--sl-font-sans);
     font-size: calc(var(--size) * 0.5);
     font-weight: var(--font-weight);
-    color: var(--sl-color-text-inverse);
+    color: var(--color);
     user-select: none;
     vertical-align: middle;
   }
@@ -35,7 +37,7 @@ export default css`
 
   .avatar--rounded,
   .avatar--rounded .avatar__image {
-    border-radius: var(--sl-control-border-radius-medium);
+    border-radius: var(--border-radius);
   }
 
   .avatar--square {

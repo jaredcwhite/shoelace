@@ -9,6 +9,7 @@ export default css`
     --border-color: var(--sl-panel-border-color);
     --border-radius: var(--sl-panel-border-radius);
     --border-width: var(--sl-panel-border-width);
+    --shadow: var(--sl-shadow-x-small);
     --padding: var(--sl-panel-spacing);
 
     display: inline-block;
@@ -17,8 +18,8 @@ export default css`
   .card {
     display: flex;
     flex-direction: column;
-    background: var(--background-color);
-    box-shadow: var(--sl-shadow-x-small);
+    background: var(--background);
+    box-shadow: var(--shadow);
     border: solid var(--border-width) var(--border-color);
     border-radius: var(--border-radius);
   }

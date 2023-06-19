@@ -12,7 +12,7 @@ export default css`
     --border-color: var(--sl-panel-border-color);
     --border-radius: var(--sl-panel-border-radius);
     --border-width: var(--sl-panel-border-width);
-    --border-width-thickness: 3;
+    --thick-border-multiplier: 3;
     --padding: var(--sl-panel-spacing);
 
     display: contents;
@@ -27,7 +27,7 @@ export default css`
     align-items: stretch;
     background-color: var(--background);
     border: solid var(--border-width) var(--border-color);
-    border-top-width: calc(var(--border-width) * var(--border-width-thickness));
+    border-top-width: calc(var(--border-width) * var(--thick-border-multiplier));
     border-radius: var(--border-radius);
     font-family: var(--sl-font-sans);
     font-size: var(--font-size);

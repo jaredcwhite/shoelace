@@ -6,12 +6,16 @@ export default css`
 
   :host {
     --width: 31rem;
-    --header-spacing: var(--sl-panel-spacing);
+    --header-padding: var(--sl-panel-spacing);
     --header-font-size: var(--sl-font-size-large);
     --header-line-height: var(--sl-line-height-dense);
-    --body-spacing: var(--sl-panel-spacing);
-    --footer-spacing: var(--sl-panel-spacing);
+    --header-background-color: transparent;
+    --body-padding: var(--sl-panel-spacing);
+    --body-background-color: var(--sl-panel-background-color);
+    --footer-padding: var(--sl-panel-spacing);
+    --footer-background-color: transparent;
     --border-radius: var(--sl-panel-border-radius);
+    --shadow: var(--sl-shadow-x-large);
 
     display: contents;
   }
@@ -35,9 +39,9 @@ export default css`
     width: var(--width);
     max-width: calc(100% - var(--sl-spacing-2x-large));
     max-height: calc(100% - var(--sl-spacing-2x-large));
-    background-color: var(--sl-panel-background-color);
+    background-color: var(--body-background-color);
     border-radius: var(--border-radius);
-    box-shadow: var(--sl-shadow-x-large);
+    box-shadow: var(--shadow);
   }
 
   .dialog__panel:focus {
@@ -59,6 +63,7 @@ export default css`
   .dialog__header {
     flex: 0 0 auto;
     display: flex;
+    background-color: var(--header-background-color);
   }
 
   .dialog__title {
@@ -66,7 +71,7 @@ export default css`
     font: inherit;
     font-size: var(--header-font-size);
     line-height: var(--header-line-height);
-    padding: var(--header-spacing);
+    padding: var(--header-padding);
     margin: 0;
   }
 
@@ -75,8 +80,8 @@ export default css`
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    gap: calc(var(--header-spacing) * 0.2);
-    padding: 0 var(--header-spacing);
+    gap: calc(var(--header-padding) * 0.2);
+    padding: 0 var(--header-padding);
   }
 
   .dialog__header-actions sl-icon-button,
@@ -90,7 +95,7 @@ export default css`
   .dialog__body {
     flex: 1 1 auto;
     display: block;
-    padding: var(--body-spacing);
+    padding: var(--body-padding);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -98,7 +103,8 @@ export default css`
   .dialog__footer {
     flex: 0 0 auto;
     text-align: right;
-    padding: var(--footer-spacing);
+    padding: var(--footer-padding);
+    background-color: var(--footer-background-color);
   }
 
   .dialog__footer ::slotted(sl-button:not(:first-of-type)) {

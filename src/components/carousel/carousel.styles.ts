@@ -6,6 +6,16 @@ export default css`
 
   :host {
     --slide-gap: var(--sl-spacing-medium, 1rem);
+    --slide-border-radius: var(--sl-border-radius-small);
+    --interior-gap: var(--sl-spacing-medium);
+    --navigation-size: var(--sl-font-size-x-large);
+    --navigation-border-radius: var(--sl-border-radius-small);
+    --navigation-color: var(--sl-color-neutral-base);
+    --navigation-padding: var(--sl-spacing-x-small);
+    --pagination-gap: var(--sl-spacing-small);
+    --pagination-size: var(--sl-spacing-small);
+    --pagination-color: var(--sl-color-neutral-base-faded);
+    --pagination-color-active: var(--sl-color-neutral-text);
     --aspect-ratio: 16 / 9;
     --scroll-hint: 0px;
 
@@ -19,7 +29,7 @@ export default css`
     grid-template-areas:
       '. slides .'
       '. pagination .';
-    gap: var(--sl-spacing-medium);
+    gap: var(--interior-gap);
     align-items: center;
     min-height: 100%;
     min-width: 100%;
@@ -31,7 +41,7 @@ export default css`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--sl-spacing-small);
+    gap: var(--pagination-gap);
   }
 
   .carousel__slides {
@@ -46,7 +56,7 @@ export default css`
     overscroll-behavior-x: contain;
     scrollbar-width: none;
     aspect-ratio: calc(var(--aspect-ratio) * var(--slides-per-page));
-    border-radius: var(--sl-border-radius-small);
+    border-radius: var(--slide-border-radius);
 
     --slide-size: calc((100% - (var(--slides-per-page) - 1) * var(--slide-gap)) / var(--slides-per-page));
   }
@@ -95,7 +105,7 @@ export default css`
   .carousel__navigation {
     grid-area: navigation;
     display: contents;
-    font-size: var(--sl-font-size-x-large);
+    font-size: var(--navigation-size);
   }
 
   .carousel__navigation-button {
@@ -104,10 +114,10 @@ export default css`
     align-items: center;
     background: none;
     border: none;
-    border-radius: var(--sl-border-radius-small);
+    border-radius: var(--navigation-border-radius);
     font-size: inherit;
-    color: var(--sl-color-neutral-600);
-    padding: var(--sl-spacing-x-small);
+    color: var(--navigation-color);
+    padding: var(--navigation-padding);
     cursor: pointer;
     transition: var(--sl-transition-medium) color;
     appearance: none;
@@ -138,15 +148,15 @@ export default css`
     background: none;
     border: 0;
     border-radius: var(--sl-border-radius-circle);
-    width: var(--sl-spacing-small);
-    height: var(--sl-spacing-small);
-    background-color: var(--sl-color-neutral-300);
+    width: var(--pagination-size);
+    height: var(--pagination-size);
+    background-color: var(--pagination-color);
     padding: 0;
     margin: 0;
   }
 
   .carousel__pagination-item--active {
-    background-color: var(--sl-color-neutral-700);
+    background-color: var(--pagination-color-active);
     transform: scale(1.2);
   }
 

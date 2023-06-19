@@ -158,7 +158,7 @@ export default css`
   /* Tooltip output */
   .range__tooltip {
     position: absolute;
-    z-index: var(--sl-z-index-tooltip);
+    z-index: var(--sl-z-index-popover);
     left: 0;
     border-radius: var(--sl-popover-border-radius);
     background-color: var(--sl-popover-background-color);

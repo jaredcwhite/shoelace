@@ -9,6 +9,10 @@ export default css`
     --divider-hit-area: 12px;
     --min: 0%;
     --max: 100%;
+    --background-color: var(--sl-color-neutral-border);
+    --color: var(--sl-color-neutral-text);
+    --focus-background-color: var(--sl-color-primary-base);
+    --focus-visible-color: var(--sl-color-text-inverse);
 
     display: grid;
   }
@@ -24,8 +28,8 @@ export default css`
     position: relative;
     align-items: center;
     justify-content: center;
-    background-color: var(--sl-color-neutral-200);
-    color: var(--sl-color-neutral-900);
+    background-color: var(--background-color);
+    color: var(--color);
     z-index: 1;
   }
 
@@ -34,8 +38,8 @@ export default css`
   }
 
   :host(:not([disabled])) .divider:focus-visible {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--focus-background-color);
+    color: var(--focus-visible-color);
   }
 
   :host([disabled]) .divider {

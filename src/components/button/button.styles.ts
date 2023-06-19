@@ -5,6 +5,14 @@ export default css`
   ${componentStyles}
 
   :host {
+    --interior-gap-small: var(--sl-spacing-x-small);
+    --interior-gap-medium: var(--sl-spacing-small);
+    --interior-gap-large: var(--sl-spacing-small);
+    --transition-duration: var(--sl-transition-x-fast);
+    --disabled-opacity: 0.5;
+    --normal-border: solid var(--sl-input-border-width);
+    --outline-border: solid var(--sl-input-border-width);
+
     display: inline-block;
     position: relative;
     width: auto;
@@ -16,8 +24,7 @@ export default css`
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    border-style: solid;
-    border-width: var(--sl-input-border-width);
+    border: var(--normal-border);
     font-family: var(--sl-input-font-family);
     font-weight: var(--sl-font-weight-semibold);
     text-decoration: none;
@@ -25,8 +32,8 @@ export default css`
     white-space: nowrap;
     vertical-align: middle;
     padding: 0;
-    transition: var(--sl-transition-x-fast) background-color, var(--sl-transition-x-fast) color,
-      var(--sl-transition-x-fast) border, var(--sl-transition-x-fast) box-shadow;
+    transition: var(--transition-duration) background-color, var(--transition-duration) color,
+      var(--transition-duration) border, var(--transition-duration) box-shadow;
     cursor: inherit;
   }
 
@@ -44,7 +51,7 @@ export default css`
   }
 
   .button--disabled {
-    opacity: 0.5;
+    opacity: var(--disabled-opacity);
     cursor: not-allowed;
   }
 
@@ -192,7 +199,7 @@ export default css`
 
   .button--outline {
     background: none;
-    border: solid 1px;
+    border: var(--outline-border);
   }
 
   /* Default */

@@ -19,7 +19,7 @@ export default css`
 
   .tooltip::part(popup) {
     pointer-events: none;
-    z-index: var(--sl-z-index-tooltip);
+    z-index: var(--sl-z-index-popover);
   }
 
   .tooltip[placement^='top']::part(popup) {

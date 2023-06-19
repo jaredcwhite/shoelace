@@ -9,9 +9,20 @@ export default css`
   }
 
   .details {
-    border: solid 1px var(--sl-color-neutral-200);
-    border-radius: var(--sl-border-radius-medium);
-    background-color: var(--sl-color-neutral-0);
+    --border-color: var(--sl-panel-border-color);
+    --border-radius: var(--sl-panel-border-radius);
+    --border-width: var(--sl-panel-border-width);
+    --background: var(--sl-panel-background-color);
+    --header-background: transparent;
+    --header-padding: var(--sl-spacing-medium);
+    --content-background: transparent;
+    --content-padding: var(--sl-spacing-medium);
+    --open-icon-rotation: 90deg;
+    --rtl-open-icon-rotation: -90deg;
+
+    border: solid var(--border-width) var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background);
     overflow-anchor: none;
   }
 
@@ -23,7 +34,8 @@ export default css`
     display: flex;
     align-items: center;
     border-radius: inherit;
-    padding: var(--sl-spacing-medium);
+    background: var(--header-background);
+    padding: var(--header-padding);
     user-select: none;
     cursor: pointer;
   }
@@ -60,11 +72,11 @@ export default css`
   }
 
   .details--open .details__summary-icon {
-    rotate: 90deg;
+    rotate: var(--open-icon-rotation);
   }
 
   .details--open.details--rtl .details__summary-icon {
-    rotate: -90deg;
+    rotate: var(--rtl-open-icon-rotation);
   }
 
   .details--open slot[name='expand-icon'],
@@ -78,6 +90,7 @@ export default css`
 
   .details__content {
     display: block;
-    padding: var(--sl-spacing-medium);
+    background: var(--content-background);
+    padding: var(--content-padding);
   }
 `;

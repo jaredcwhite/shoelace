@@ -5,6 +5,12 @@ export default css`
   ${componentStyles}
 
   :host {
+    --font-size: var(--sl-font-size-small);
+    --font-weight: var(--sl-font-weight-semibold);
+    --color: var(--sl-color-neutral-base);
+    --interior-gap: var(--sl-spacing-x-small);
+    --separator-gap: var(--sl-spacing-x-small);
+
     display: inline-flex;
   }
 
@@ -12,9 +18,9 @@ export default css`
     display: inline-flex;
     align-items: center;
     font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    color: var(--sl-color-neutral-600);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--color);
     line-height: var(--sl-line-height-normal);
     white-space: nowrap;
   }
@@ -37,15 +43,15 @@ export default css`
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label {
-    color: var(--sl-color-primary-600);
+    color: var(--sl-color-primary-base);
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label:hover {
-    color: var(--sl-color-primary-500);
+    color: var(--sl-color-primary-base-faded);
   }
 
   :host(:not(:last-of-type)) .breadcrumb-item__label:active {
-    color: var(--sl-color-primary-600);
+    color: var(--sl-color-primary-base);
   }
 
   .breadcrumb-item__label:focus {
@@ -67,12 +73,12 @@ export default css`
 
   .breadcrumb-item--has-prefix .breadcrumb-item__prefix {
     display: inline-flex;
-    margin-inline-end: var(--sl-spacing-x-small);
+    margin-inline-end: var(--interior-gap);
   }
 
   .breadcrumb-item--has-suffix .breadcrumb-item__suffix {
     display: inline-flex;
-    margin-inline-start: var(--sl-spacing-x-small);
+    margin-inline-start: var(--interior-gap);
   }
 
   :host(:last-of-type) .breadcrumb-item__separator {
@@ -82,7 +88,7 @@ export default css`
   .breadcrumb-item__separator {
     display: inline-flex;
     align-items: center;
-    margin: 0 var(--sl-spacing-x-small);
+    margin: 0 var(--separator-gap);
     user-select: none;
   }
 `;

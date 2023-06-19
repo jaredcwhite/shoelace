@@ -11,6 +11,7 @@ export default css`
     --padding: 0.35em 0.6em;
     --border-color: var(--sl-color-text-inverse);
     --border-width: var(--sl-control-border-width);
+    --border-radius: var(--sl-control-border-radius-small);
 
     display: inline-flex;
   }
@@ -23,7 +24,7 @@ export default css`
     font-weight: var(--font-weight);
     letter-spacing: var(--letter-spacing);
     line-height: 1;
-    border-radius: var(--sl-control-border-radius-small);
+    border-radius: var(--border-radius);
     border: solid var(--border-color) var(--border-width);
     white-space: nowrap;
     padding: var(--padding);

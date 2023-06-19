@@ -6,12 +6,15 @@ export default css`
 
   :host {
     --border-width: var(--sl-input-border-width);
-    --small-padding: var(--sl-spacing-x-small);
-    --medium-padding: var(--sl-spacing-small);
-    --large-padding: var(--sl-spacing-medium);
-    --small-font-size: var(--sl-button-font-size-small);
-    --medium-font-size: var(--sl-button-font-size-medium);
-    --large-font-size: var(--sl-button-font-size-large);
+    --border-radius-small: var(--sl-input-border-radius-small);
+    --padding-small: var(--sl-spacing-x-small);
+    --font-size-small: var(--sl-button-font-size-small);
+    --border-radius-medium: var(--sl-input-border-radius-medium);
+    --padding-medium: var(--sl-spacing-small);
+    --font-size-medium: var(--sl-button-font-size-medium);
+    --padding-large: var(--sl-spacing-medium);
+    --font-size-large: var(--sl-button-font-size-large);
+    --border-radius-large: var(--sl-input-border-radius-large);
 
     display: inline-block;
   }
@@ -89,27 +92,27 @@ export default css`
    */
 
   .tag--small {
-    font-size: var(--small-font-size);
+    font-size: var(--font-size-small);
     height: calc(var(--sl-input-height-small) * 0.8);
     line-height: calc(var(--sl-input-height-small) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-small);
-    padding: 0 var(--small-padding);
+    border-radius: var(--border-radius-small);
+    padding: 0 var(--padding-small);
   }
 
   .tag--medium {
-    font-size: var(--medium-font-size);
+    font-size: var(--font-size-medium);
     height: calc(var(--sl-input-height-medium) * 0.8);
     line-height: calc(var(--sl-input-height-medium) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-medium);
-    padding: 0 var(--medium-padding);
+    border-radius: var(--border-radius-medium);
+    padding: 0 var(--padding-medium);
   }
 
   .tag--large {
-    font-size: var(--large-font-size);
+    font-size: var(--font-size-large);
     height: calc(var(--sl-input-height-large) * 0.8);
     line-height: calc(var(--sl-input-height-large) - var(--sl-input-border-width) * 2);
-    border-radius: var(--sl-input-border-radius-large);
-    padding: 0 var(--large-padding);
+    border-radius: var(--border-radius-large);
+    padding: 0 var(--padding-large);
   }
 
   .tag__remove {

@@ -23,7 +23,7 @@ export default css`
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    color: var(--sl-color-neutral-700);
+    color: var(--label-color);
     cursor: pointer;
     user-select: none;
   }
@@ -36,8 +36,8 @@ export default css`
   .tree-item__checkbox,
   .tree-item__label {
     font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
     line-height: var(--sl-line-height-dense);
     letter-spacing: var(--sl-letter-spacing-normal);
   }
@@ -58,10 +58,11 @@ export default css`
     align-items: center;
     justify-content: center;
     box-sizing: content-box;
-    color: var(--sl-color-neutral-500);
+    color: var(--expand-button-color);
     padding: var(--sl-spacing-x-small);
-    width: 1rem;
-    height: 1rem;
+    width: var(--expand-button-width);
+    height: var(--expand-button-height);
+    font-size: var(--expand-button-font-size);
     flex-shrink: 0;
     cursor: pointer;
   }
@@ -71,11 +72,11 @@ export default css`
   }
 
   .tree-item--expanded .tree-item__expand-button {
-    rotate: 90deg;
+    rotate: var(--open-icon-rotation);
   }
 
   .tree-item--expanded.tree-item--rtl .tree-item__expand-button {
-    rotate: -90deg;
+    rotate: var(--rtl-open-icon-rotation);
   }
 
   .tree-item--expanded slot[name='expand-icon'],
@@ -94,7 +95,7 @@ export default css`
   .tree-item__item {
     display: flex;
     align-items: center;
-    border-inline-start: solid 3px transparent;
+    border-inline-start: var(--border-inline-start);
   }
 
   .tree-item--disabled .tree-item__item {
@@ -110,12 +111,12 @@ export default css`
   }
 
   :host(:not([aria-disabled='true'])) .tree-item--selected .tree-item__item {
-    background-color: var(--sl-color-neutral-100);
-    border-inline-start-color: var(--sl-color-primary-600);
+    background-color: var(--background-color-active);
+    border-inline-start-color: var(--border-inline-start-color-active);
   }
 
   :host(:not([aria-disabled='true'])) .tree-item__expand-button {
-    color: var(--sl-color-neutral-600);
+    color: var(--expand-button-color);
   }
 
   .tree-item__label {
