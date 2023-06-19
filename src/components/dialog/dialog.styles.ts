@@ -6,9 +6,12 @@ export default css`
 
   :host {
     --width: 31rem;
-    --header-spacing: var(--sl-spacing-large);
-    --body-spacing: var(--sl-spacing-large);
-    --footer-spacing: var(--sl-spacing-large);
+    --header-spacing: var(--sl-panel-spacing);
+    --header-font-size: var(--sl-font-size-large);
+    --header-line-height: var(--sl-line-height-dense);
+    --body-spacing: var(--sl-panel-spacing);
+    --footer-spacing: var(--sl-panel-spacing);
+    --border-radius: var(--sl-panel-border-radius);
 
     display: contents;
   }
@@ -33,7 +36,7 @@ export default css`
     max-width: calc(100% - var(--sl-spacing-2x-large));
     max-height: calc(100% - var(--sl-spacing-2x-large));
     background-color: var(--sl-panel-background-color);
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--border-radius);
     box-shadow: var(--sl-shadow-x-large);
   }
 
@@ -61,8 +64,8 @@ export default css`
   .dialog__title {
     flex: 1 1 auto;
     font: inherit;
-    font-size: var(--sl-font-size-large);
-    line-height: var(--sl-line-height-dense);
+    font-size: var(--header-font-size);
+    line-height: var(--header-line-height);
     padding: var(--header-spacing);
     margin: 0;
   }
@@ -72,7 +75,7 @@ export default css`
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    gap: var(--sl-spacing-2x-small);
+    gap: calc(var(--header-spacing) * 0.2);
     padding: 0 var(--header-spacing);
   }
 
@@ -117,7 +120,7 @@ export default css`
 
   @media (forced-colors: active) {
     .dialog__panel {
-      border: solid 1px var(--sl-color-neutral-0);
+      border: solid 1px var(--sl-color-text-inverse);
     }
   }
 `;

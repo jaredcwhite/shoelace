@@ -5,6 +5,13 @@ export default css`
   ${componentStyles}
 
   :host {
+    --font-size: max(12px, 0.75em);
+    --font-weight: var(--sl-font-weight-semibold);
+    --letter-spacing: var(--sl-letter-spacing-normal);
+    --padding: 0.35em 0.6em;
+    --border-color: var(--sl-color-text-inverse);
+    --border-width: var(--sl-control-border-width);
+
     display: inline-flex;
   }
 
@@ -12,22 +19,22 @@ export default css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: max(12px, 0.75em);
-    font-weight: var(--sl-font-weight-semibold);
-    letter-spacing: var(--sl-letter-spacing-normal);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-spacing);
     line-height: 1;
-    border-radius: var(--sl-border-radius-small);
-    border: solid 1px var(--sl-color-neutral-0);
+    border-radius: var(--sl-control-border-radius-small);
+    border: solid var(--border-color) var(--border-width);
     white-space: nowrap;
-    padding: 0.35em 0.6em;
+    padding: var(--padding);
     user-select: none;
     cursor: inherit;
   }
 
   /* Variant modifiers */
   .badge--primary {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--sl-color-primary-base);
+    color: var(--sl-color-text-inverse);
   }
 
   .badge--success {
@@ -61,7 +68,7 @@ export default css`
   }
 
   .badge--pulse.badge--primary {
-    --pulse-color: var(--sl-color-primary-600);
+    --pulse-color: var(--sl-color-primary-base);
   }
 
   .badge--pulse.badge--success {

@@ -5,9 +5,11 @@ export default css`
   ${componentStyles}
 
   :host {
-    display: inline-block;
-
     --size: 3rem;
+    --blank-background: var(--sl-color-neutral-base-faded);
+    --font-weight: var(--sl-font-weight-normal);
+
+    display: inline-block;
   }
 
   .avatar {
@@ -17,11 +19,11 @@ export default css`
     position: relative;
     width: var(--size);
     height: var(--size);
-    background-color: var(--sl-color-neutral-400);
+    background: var(--blank-background);
     font-family: var(--sl-font-sans);
     font-size: calc(var(--size) * 0.5);
-    font-weight: var(--sl-font-weight-normal);
-    color: var(--sl-color-neutral-0);
+    font-weight: var(--font-weight);
+    color: var(--sl-color-text-inverse);
     user-select: none;
     vertical-align: middle;
   }
@@ -33,7 +35,7 @@ export default css`
 
   .avatar--rounded,
   .avatar--rounded .avatar__image {
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--sl-control-border-radius-medium);
   }
 
   .avatar--square {

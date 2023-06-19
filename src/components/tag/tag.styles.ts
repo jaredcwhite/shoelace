@@ -5,13 +5,21 @@ export default css`
   ${componentStyles}
 
   :host {
+    --border-width: var(--sl-input-border-width);
+    --small-padding: var(--sl-spacing-x-small);
+    --medium-padding: var(--sl-spacing-small);
+    --large-padding: var(--sl-spacing-medium);
+    --small-font-size: var(--sl-button-font-size-small);
+    --medium-font-size: var(--sl-button-font-size-medium);
+    --large-font-size: var(--sl-button-font-size-large);
+
     display: inline-block;
   }
 
   .tag {
     display: flex;
     align-items: center;
-    border: solid 1px;
+    border: solid var(--border-width);
     line-height: 1;
     white-space: nowrap;
     user-select: none;
@@ -27,13 +35,13 @@ export default css`
    */
 
   .tag--primary {
-    background-color: var(--sl-color-primary-50);
-    border-color: var(--sl-color-primary-200);
-    color: var(--sl-color-primary-800);
+    background-color: var(--sl-color-primary-background);
+    border-color: var(--sl-color-primary-border);
+    color: var(--sl-color-primary-text);
   }
 
   .tag--primary:active > sl-icon-button {
-    color: var(--sl-color-primary-600);
+    color: var(--sl-color-primary-base);
   }
 
   .tag--success {
@@ -81,27 +89,27 @@ export default css`
    */
 
   .tag--small {
-    font-size: var(--sl-button-font-size-small);
+    font-size: var(--small-font-size);
     height: calc(var(--sl-input-height-small) * 0.8);
     line-height: calc(var(--sl-input-height-small) - var(--sl-input-border-width) * 2);
     border-radius: var(--sl-input-border-radius-small);
-    padding: 0 var(--sl-spacing-x-small);
+    padding: 0 var(--small-padding);
   }
 
   .tag--medium {
-    font-size: var(--sl-button-font-size-medium);
+    font-size: var(--medium-font-size);
     height: calc(var(--sl-input-height-medium) * 0.8);
     line-height: calc(var(--sl-input-height-medium) - var(--sl-input-border-width) * 2);
     border-radius: var(--sl-input-border-radius-medium);
-    padding: 0 var(--sl-spacing-small);
+    padding: 0 var(--medium-padding);
   }
 
   .tag--large {
-    font-size: var(--sl-button-font-size-large);
+    font-size: var(--large-font-size);
     height: calc(var(--sl-input-height-large) * 0.8);
     line-height: calc(var(--sl-input-height-large) - var(--sl-input-border-width) * 2);
     border-radius: var(--sl-input-border-radius-large);
-    padding: 0 var(--sl-spacing-medium);
+    padding: 0 var(--large-padding);
   }
 
   .tag__remove {
