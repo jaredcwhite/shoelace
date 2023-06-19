@@ -13,8 +13,8 @@ export default css`
   }
 
   .tooltip {
-    --arrow-size: var(--sl-tooltip-arrow-size);
-    --arrow-color: var(--sl-tooltip-background-color);
+    --arrow-size: var(--sl-popover-arrow-size);
+    --arrow-color: var(--sl-popover-background-color);
   }
 
   .tooltip::part(popup) {
@@ -42,14 +42,14 @@ export default css`
     display: block;
     width: max-content;
     max-width: var(--max-width);
-    border-radius: var(--sl-tooltip-border-radius);
-    background-color: var(--sl-tooltip-background-color);
-    font-family: var(--sl-tooltip-font-family);
-    font-size: var(--sl-tooltip-font-size);
-    font-weight: var(--sl-tooltip-font-weight);
-    line-height: var(--sl-tooltip-line-height);
-    color: var(--sl-tooltip-color);
-    padding: var(--sl-tooltip-padding);
+    border-radius: var(--sl-popover-border-radius);
+    background-color: var(--sl-popover-background-color);
+    font-family: var(--sl-popover-font-family);
+    font-size: var(--sl-popover-font-size);
+    font-weight: var(--sl-popover-font-weight);
+    line-height: var(--sl-popover-line-height);
+    color: var(--sl-popover-color);
+    padding: var(--sl-popover-padding);
     pointer-events: none;
   }
 `;

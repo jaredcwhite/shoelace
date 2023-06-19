@@ -318,7 +318,7 @@
   --sl-color-neutral-900: var(--sl-color-gray-900);
   --sl-color-neutral-950: var(--sl-color-gray-950);
 
-  /* Primary Semantic */
+  /* Neutral Semantic */
   --sl-color-neutral-background: var(--sl-color-neutral-50);
   --sl-color-neutral-border: var(--sl-color-neutral-200);
   --sl-color-neutral-base-faded: var(--sl-color-neutral-400);
@@ -532,18 +532,18 @@
   --sl-panel-spacing: var(--sl-spacing-large);
 
   /*
-   * Tooltips
+   * Popovers
    */
 
-  --sl-tooltip-border-radius: var(--sl-control-border-radius-medium);
-  --sl-tooltip-background-color: var(--sl-color-neutral-text);
-  --sl-tooltip-color: var(--sl-color-text-inverse);
-  --sl-tooltip-font-family: var(--sl-font-sans);
-  --sl-tooltip-font-weight: var(--sl-font-weight-normal);
-  --sl-tooltip-font-size: var(--sl-font-size-small);
-  --sl-tooltip-line-height: var(--sl-line-height-dense);
-  --sl-tooltip-padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-small);
-  --sl-tooltip-arrow-size: 6px;
+  --sl-popover-border-radius: var(--sl-control-border-radius-medium);
+  --sl-popover-background-color: var(--sl-color-neutral-text);
+  --sl-popover-color: var(--sl-color-text-inverse);
+  --sl-popover-font-family: var(--sl-font-sans);
+  --sl-popover-font-weight: var(--sl-font-weight-normal);
+  --sl-popover-font-size: var(--sl-font-size-small);
+  --sl-popover-line-height: var(--sl-line-height-dense);
+  --sl-popover-padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-small);
+  --sl-popover-arrow-size: 6px;
 
   /*
    * Z-indexes

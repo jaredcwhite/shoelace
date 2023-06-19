@@ -160,15 +160,15 @@ export default css`
     position: absolute;
     z-index: var(--sl-z-index-tooltip);
     left: 0;
-    border-radius: var(--sl-tooltip-border-radius);
-    background-color: var(--sl-tooltip-background-color);
-    font-family: var(--sl-tooltip-font-family);
-    font-size: var(--sl-tooltip-font-size);
-    font-weight: var(--sl-tooltip-font-weight);
-    line-height: var(--sl-tooltip-line-height);
-    color: var(--sl-tooltip-color);
+    border-radius: var(--sl-popover-border-radius);
+    background-color: var(--sl-popover-background-color);
+    font-family: var(--sl-popover-font-family);
+    font-size: var(--sl-popover-font-size);
+    font-weight: var(--sl-popover-font-weight);
+    line-height: var(--sl-popover-line-height);
+    color: var(--sl-popover-color);
     opacity: 0;
-    padding: var(--sl-tooltip-padding);
+    padding: var(--sl-popover-padding);
     transition: var(--sl-transition-fast) opacity;
     pointer-events: none;
   }
@@ -179,7 +179,7 @@ export default css`
     width: 0;
     height: 0;
     left: 50%;
-    translate: calc(-1 * var(--sl-tooltip-arrow-size));
+    translate: calc(-1 * var(--sl-popover-arrow-size));
   }
 
   .range--tooltip-visible .range__tooltip {
@@ -192,9 +192,9 @@ export default css`
   }
 
   .range--tooltip-top .range__tooltip:after {
-    border-top: var(--sl-tooltip-arrow-size) solid var(--sl-tooltip-background-color);
-    border-left: var(--sl-tooltip-arrow-size) solid transparent;
-    border-right: var(--sl-tooltip-arrow-size) solid transparent;
+    border-top: var(--sl-popover-arrow-size) solid var(--sl-popover-background-color);
+    border-left: var(--sl-popover-arrow-size) solid transparent;
+    border-right: var(--sl-popover-arrow-size) solid transparent;
     top: 100%;
   }
 
@@ -204,9 +204,9 @@ export default css`
   }
 
   .range--tooltip-bottom .range__tooltip:after {
-    border-bottom: var(--sl-tooltip-arrow-size) solid var(--sl-tooltip-background-color);
-    border-left: var(--sl-tooltip-arrow-size) solid transparent;
-    border-right: var(--sl-tooltip-arrow-size) solid transparent;
+    border-bottom: var(--sl-popover-arrow-size) solid var(--sl-popover-background-color);
+    border-left: var(--sl-popover-arrow-size) solid transparent;
+    border-right: var(--sl-popover-arrow-size) solid transparent;
     bottom: 100%;
   }
 
