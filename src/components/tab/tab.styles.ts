@@ -5,6 +5,12 @@ export default css`
   ${componentStyles}
 
   :host {
+    --padding: var(--sl-spacing-medium) var(--sl-spacing-large);
+    --font-size: var(--sl-font-size-small);
+    --font-weight: var(--sl-font-weight-semibold);
+    --label-color: var(--sl-color-neutral-base);
+    --label-color-active: var(--sl-color-primary-base);
+
     display: inline-block;
   }
 
@@ -12,11 +18,11 @@ export default css`
     display: inline-flex;
     align-items: center;
     font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    border-radius: var(--sl-border-radius-medium);
-    color: var(--sl-color-neutral-600);
-    padding: var(--sl-spacing-medium) var(--sl-spacing-large);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    border-radius: var(--sl-control-border-radius-medium);
+    color: var(--label-color);
+    padding: var(--padding);
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
@@ -24,7 +30,7 @@ export default css`
   }
 
   .tab:hover:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
+    color: var(--label-color-active);
   }
 
   .tab:focus {
@@ -32,7 +38,7 @@ export default css`
   }
 
   .tab:focus-visible:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
+    color: var(--label-color-active);
   }
 
   .tab:focus-visible {
@@ -41,7 +47,7 @@ export default css`
   }
 
   .tab.tab--active:not(.tab--disabled) {
-    color: var(--sl-color-primary-600);
+    color: var(--label-color-active);
   }
 
   .tab.tab--closable {

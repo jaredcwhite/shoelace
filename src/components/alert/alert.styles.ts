@@ -5,6 +5,16 @@ export default css`
   ${componentStyles}
 
   :host {
+    --font-size: var(--sl-font-size-small);
+    --icon-size: var(--sl-font-size-large);
+    --color: var(--sl-color-neutral-text);
+    --background: var(--sl-panel-background-color);
+    --border-color: var(--sl-panel-border-color);
+    --border-radius: var(--sl-panel-border-radius);
+    --border-width: var(--sl-panel-border-width);
+    --border-width-thickness: 3;
+    --padding: var(--sl-panel-spacing);
+
     display: contents;
 
     /* For better DX, we'll reset the margin here so the base part can inherit it */
@@ -15,15 +25,15 @@ export default css`
     position: relative;
     display: flex;
     align-items: stretch;
-    background-color: var(--sl-panel-background-color);
-    border: solid var(--sl-panel-border-width) var(--sl-panel-border-color);
-    border-top-width: calc(var(--sl-panel-border-width) * 3);
-    border-radius: var(--sl-border-radius-medium);
+    background-color: var(--background);
+    border: solid var(--border-width) var(--border-color);
+    border-top-width: calc(var(--border-width) * var(--border-width-thickness));
+    border-radius: var(--border-radius);
     font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-small);
+    font-size: var(--font-size);
     font-weight: var(--sl-font-weight-normal);
     line-height: 1.6;
-    color: var(--sl-color-neutral-700);
+    color: var(--color);
     margin: inherit;
   }
 
@@ -36,12 +46,12 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    font-size: var(--sl-font-size-large);
-    padding-inline-start: var(--sl-spacing-large);
+    font-size: var(--icon-size);
+    padding-inline-start: var(--padding);
   }
 
   .alert--primary {
-    border-top-color: var(--sl-color-primary-600);
+    border-top-color: var(--sl-color-primary-base);
   }
 
   .alert--primary .alert__icon {
@@ -83,7 +93,7 @@ export default css`
   .alert__message {
     flex: 1 1 auto;
     display: block;
-    padding: var(--sl-spacing-large);
+    padding: var(--padding);
     overflow: hidden;
   }
 
@@ -92,6 +102,6 @@ export default css`
     display: flex;
     align-items: center;
     font-size: var(--sl-font-size-medium);
-    padding-inline-end: var(--sl-spacing-medium);
+    padding-inline-end: calc(var(--padding) * 0.8);
   }
 `;
